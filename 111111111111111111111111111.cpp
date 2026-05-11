@@ -1,0 +1,53 @@
+#include<stdio.h>
+mergesort(a,low,high)
+{
+	if(low<high)
+	{
+		mid=(low+high)/2;
+		mergesort(a,low,mid);
+		mergrsort(a,mid+1,high);
+		mergesort(a,low,mid,high);
+	}
+}
+merge(a,low,mid,high)
+{
+	i=low,j=mid+1,k=0;
+	temp[high-low+1];
+	while(i<=mid&&j<=high)
+	{
+		if(a[i]<=a[j])
+		{
+			temp[k]=a[i];
+			i++;
+			j++;
+		}
+		else
+		{
+			temp[k]=a[j];
+			j++;
+			k++;
+		}
+	}
+	if(j>high)
+	{
+		while(i<=mid)
+		{
+			temp[k]=a[j];
+			i++;
+			k++;
+		}
+	}
+	else
+	{
+		while(j<=high)
+		{
+			temp[k]=a[j];
+			i++;
+			k++;
+		}
+	}
+	for(i=low;k=0;i<=high)
+	{
+		a[i]=temp[k];
+	}
+}
